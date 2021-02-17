@@ -1,3 +1,293 @@
+@font-face{
+    font-family: "Graphik-Medium";
+    src:url(./assets/fonts/Graphik-Medium-Web.woff2);
+}
+
+@font-face{
+    font-family: "Graphik-Regular";
+    src:url(./assets/fonts/Graphik-Regular-Web.woff2);
+}
+
+@font-face{
+    font-family: "Sometimes-Times-Italic";
+    src:url(./assets/fonts/Sometimes-Times-Italic.woff2);
+}
+
+
+$white: white;
+$black: black;
+$blue:  #3451be;
+$light-gray: #f0efec;
+$graphic-r: "Graphik-Regular";
+$graphic-m: "Graphik-Medium";
+$sometimes: "Sometimes-Times-Italic";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    color: #479cec;
+    outline: none;
+}
+
+
+.graphic-regular{
+    font-family: $graphic-r;
+}
+
+.graphic-medium{
+    font-family: $graphic-m;
+}
+
+.sometimes-italic{
+    font-family: $sometimes;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.blue{
+    color: $blue;
+}
+
+.white{
+    color: $white;
+}
+
+header{
+    background-color: rgb(24, 21, 21);
+    height: auto;
+
+    article{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-end;
+        p{
+            font-size: 2.8125rem;
+            color: $white;
+            width: 50%;
+            margin-right: 10vw;
+        }
+    }
+}
+
+nav{
+    background-color: $white;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.25rem 1.25rem;
+    border-radius: 5rem;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    
+    span{
+        width: 20%;
+        text-align: center;
+        a{
+            color: $black;
+            text-decoration: none;
+        }
+        sup{
+            margin-left: 8px;
+        }
+    }
+
+    #logo-nav{
+        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        hr{
+            transform: rotate(180deg);
+            width: 2rem;
+            height: 1px;
+            background-color: $black;
+            border: $black;
+            border-radius: 2px;
+        }
+
+        a{
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: $black;
+
+        }
+    }
+}
+
 h1{
-    color:red;
+    font-size: 14.5vw;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    line-height: 1;
+    padding-top: 80px;
+    .content-div-h1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .content-second-div-h1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 5vw;
+            text-transform: uppercase;
+            line-height: 1.2;
+            
+            hr{
+                
+                background: $white;
+                margin: 1rem 0;
+            }
+        }
+    }
+
+    .first-content-div-h1{
+        span{
+            margin-left: 10vw;
+        }
+    }
+
+    .second-content-div-h1{
+        margin-left: -5vw;
+    }
+
+    #subtitle-h1{
+        font-size: 2.8125rem;
+    }
+}
+
+#data-section{
+    padding: 10vh 10% 0 10%;
+    aside{
+        font-size: 2.8125rem;
+    }
+
+    article{
+
+        .number-incrementation{
+            font-size: 15vw;
+            line-height: 1;
+            color: $blue;
+        }
+
+        .p-card{
+            line-height: 1.5;
+            font-size: 1.1rem;
+        }
+
+        .small-card-data-section{
+            width: 20vw;
+            box-sizing: inherit;
+            hr{
+                border: solid 1px $black;
+                background: $black;
+            }
+
+            h3{
+                font-size: 2rem;
+            }
+
+        }
+        .large-card-data-section{
+            width: 40vw;
+            box-sizing: inherit;
+            hr{
+                border: solid 1px $black;
+                background: $black;
+            }
+            div{
+                width: 20vw;
+                h3{
+                    font-size: 2rem;
+                }
+                .p-card{
+                    line-height: 1.5;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .first-article-data-section{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .second-article-data-section{
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        bottom: 10vh;
+    }
+
+    .thrid-article-data-section{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        bottom: 25vh;
+    }
+}
+
+#card-section{
+    height: 100vh;
+    background-color: $light-gray;
+    display: flex;
+    padding: 10vh 15vw;
+    align-items: center;
+    justify-content: space-around;
+    .card{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        height: 65vh;
+        background-color: $white;
+        padding: 0 15vw;
+        border-radius: 1rem;
+        p{
+            font-size: 3.4375rem;
+            sup{
+                font-size: 1.5rem;
+                position: relative;
+                bottom: 15px;
+                left: 10px;
+            }
+        }
+    
+        .arrow{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            bottom: 1.875rem;
+            right: 1.875rem;
+            p{
+                font-size: 1rem;
+                color: red;
+                margin-right: 10px;
+            }
+            
+        }
+
+    }
+
+    .card:hover{
+        background-color: $blue;
+            p{
+                color: $white;
+            }
+        }
+    
 }
